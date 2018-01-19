@@ -1,0 +1,24 @@
+{
+  "name": "Todo",
+  "plural": "todos",
+  "base": "PersistedModel",
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    "description": {
+      "type": "string",
+      "index": true
+    },
+    "isComplete": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {},
+  "mixins": {}
+}

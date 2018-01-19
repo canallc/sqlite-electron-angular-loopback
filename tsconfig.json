@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "target": "es5",
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "module": "system",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false
+  },
+  "compileOnSave": true,
+  "exclude": [
+    "build",
+    "node_modules",
+    "typings/main",
+    "typings/main.d.ts",
+    "typings/browser.d.ts"
+  ]
+}

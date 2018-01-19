@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/" />
+    <title>Electron-Looback-Sqlite Starter Project</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <!-- Bootstrap theme -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"/>
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./css/styles.css"/>
+
+    <!-- Temporarily undefine 'module' global variable, so certain javascript libraries (like jQuery) don't think we are running in node. We'll redefine it after SystemJS has loaded. -->
+    <script type="text/javascript">if (window.module) { window._module = window.module; window.module = undefined; }</script>
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+
+    <!-- Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+
+      // Bootstrap the angular app
+      System.import('./main').then(() => {
+        // Redefine `window.module`, since we previously set it to `undefined`
+        if (window._module) { window.module = window._module; }
+      }).catch(function(err){ console.error(err); });
+
+    </script>
+  </head>
+
+  <body>
+    <my-app></my-app>
+  </body>
+</html>
