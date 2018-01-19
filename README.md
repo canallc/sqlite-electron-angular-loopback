@@ -2,6 +2,14 @@
 
 This is a quick-start project using the SEAL (SQLite, Electron, Angular, and Loopback) stack.
 
+To get started:
+
+```
+$ git clone https://github.com/canallc/sqlite-electron-angular-loopback.git
+$ cd sqlite-electron-angular-loopback
+$ npm install && npm start
+```
+
 ## But I already have an existing project...
 
 Do you already have an existing project using either Electron or Loopback? If so, keep reading to see how this project was created, and how you can update your existing project to use the SEAL (SQLite, Electron, Angular, Loopback) stack.
