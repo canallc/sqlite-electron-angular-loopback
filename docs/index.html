@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+
+    <title>SEAL Stack</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="./vendor/bootstrap/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./vendor/font-awesome/css/font-awesome.min.css"/>
+
+    <!-- Custom styles for this template -->
+    <link href="theme.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./">SEAL Stack</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="menu-item menu-item-home active"><a href="./">Home</a></li>
+            <li class="menu-item menu-item-contributors"><a href="./pages/contributors.html">Contributors</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div id="pjax-container" class="container theme-showcase" role="main">
+
+      <!-- Content is dynamically loaded by pjax -->
+
+      <!-- This is the HTML for the home page. PJAX will overwrite it when the page changes, but it will save it,
+           so it gets loaded if the user clicks a pjax link to get back to the home page -->
+      <div>
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+          <h1>SEAL Stack</h1>
+          <p>A Fullstack JavaScript framework using SQLite, Electron, Angular, and LoopBack.</p>
+          <p><a class="btn btn-success" href="https://github.com/canallc/sqlite-electron-angular-loopback"><i class="fa fa-github" aria-hidden="true"></i> View on GitHub</a></p>
+        </div>
+
+
+        <div class="page-header no-bottom-border">
+          <h1>SEAL stands for:</h1>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <div class="tech-image-container">
+              <a href="http://sqlite.org/" title="SQLite"><img src="./img/sqlite.png" class="tech-image"/></a>
+            </div>
+            <div class="tech-description">
+              <a href="http://sqlite.org/" title="SQLite">SQLite</a> is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. SQLite is the most used database engine in the world.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="tech-image-container">
+              <a href="https://electronjs.org/" title="Electron"><img src="./img/electron.svg" class="tech-image"/></a>
+            </div>
+            <div class="tech-description">
+              <a href="https://electronjs.org/" title="Electron">Electron</a> is a framework for creating native applications with web technologies like JavaScript, HTML, and CSS. It takes care of the hard parts so you can focus on the core of your application.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="tech-image-container">
+              <a href="https://angular.io/" title="Angular"><img src="./img/angular.svg" class="tech-image"/></a>
+            </div>
+            <div class="tech-description">
+              <a href="https://angular.io/" title="Angular">Angular</a> lets you extend HTML vocabulary for your application. The resulting environment is extraordinarily expressive, readable, and quick to develop.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="tech-image-container">
+              <a href="https://loopback.io/" title="LoopBack"><img src="./img/loopback.png" class="tech-image electron-image"/></a>
+            </div>
+            <div class="tech-description">
+              <a href="https://loopback.io/" title="LoopBack">Loopback</a> is a highly-extensible, open-source Node.js framework.
+            </div>
+          </div>
+        </div>
+
+        <div class="page-header no-bottom-border">
+          <h1>Get SEAL by running:</h1>
+        </div>
+
+        <pre>
+        $ git clone https://github.com/canallc/sqlite-electron-angular-loopback.git
+        $ cd sqlite-electron-angular-loopback
+        $ npm install && npm start</pre>
+      </div>
+
+    </div> <!-- /container -->
+
+    <div class="footer text-right">
+      <div class="container">
+        <a href="https://www.canallc.com" title="CANA Advisors"><img class="cana-logo" src="./img/cana-advisors.gif"/></a>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="./vendor/jquery/jquery.min.js"><\/script>')</script>
+    <script type="text/javascript" src="./vendor/jquery-pjax/jquery.pjax.js"></script>
+
+    <script type="text/javascript">
+
+      $(document).ready(function() {
+
+        // Init pjax
+        $(document).pjax('a', '#pjax-container', { push: false });
+
+        $(document).on('pjax:end', function(evt, xhr, options) {
+          var url = options && options.url;
+          if (!url) { return; }
+
+          var page = url.substr(url.lastIndexOf('/') + 1);
+
+          // Remove the active class from the active menu item
+          $('.menu-item.active').removeClass('active');
+
+          // Set the current menu item active
+          switch (page) {
+            case 'contributors.html': $('.menu-item-contributors').addClass('active'); break;
+            default: $('.menu-item-home').addClass('active');
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

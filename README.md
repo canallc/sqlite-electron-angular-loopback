@@ -1,6 +1,6 @@
 # sqlite-electron-angular-loopback
 
-This is a quick-start project using the SEAL (SQLite, Electron, Angular, and Loopback) stack.
+This is a quick-start project using the SEAL (SQLite, Electron, Angular, and Loopback) stack. For more information on the SEAL stack, go [here](https://canallc.github.io/sqlite-electron-angular-loopback/ "SEAL Stack").
 
 To get started:
 
