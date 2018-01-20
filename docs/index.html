@@ -126,6 +126,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="./vendor/jquery/jquery.min.js"><\/script>')</script>
+    <script src="./vendor/bootstrap/bootstrap.min.js"></script>
     <script type="text/javascript" src="./vendor/jquery-pjax/jquery.pjax.js"></script>
 
     <script type="text/javascript">
@@ -149,6 +150,9 @@
             case 'contributors.html': $('.menu-item-contributors').addClass('active'); break;
             default: $('.menu-item-home').addClass('active');
           }
+
+          // In case we are on a phone, make sure the dropdown gets hidden
+          $('#navbar').removeClass('in');
         });
       });
 
