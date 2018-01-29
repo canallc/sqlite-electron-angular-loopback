@@ -17,6 +17,7 @@
 coverage
 node_modules
 npm-debug.log
+*.ignore.*
 client/**/*.js
 client/**/*.js.map
 !client/systemjs.config.js
