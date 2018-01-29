@@ -19,7 +19,7 @@
     "@types/jquery": "^2.0.34",
     "@types/node": "^6.0.45",
     "bootstrap": "3.3.7",
-    "jquery": "^2.1.4",
+    "jquery": "^3.0.0",
     "compression": "^1.0.3",
     "core-js": "^2.4.1",
     "cors": "^2.5.2",
@@ -36,7 +36,7 @@
     "zone.js": "0.8.18"
   },
   "devDependencies": {
-    "electron": "1.7.10",
+    "electron": "1.7.11",
     "typescript": "^2.6.1"
   },
   "repository": {
